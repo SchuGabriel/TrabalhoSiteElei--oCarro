@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Mustang</title>
+</head>
+
+<div class="cabecario">
+    <div id="cabecario-carro" class="cabecario-cronograma">
+        <div class="menu-cronograma">
+            <span><img id="logo-carro" src="/img/car.png" alt="logo-car"></span>
+            <a class="link" href="/index.html"><span class="item-cronograma">Início</span></a>
+            <a href="/carros.html"><span class="item-cronograma">Carros</span></a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main id="carro-teste">
+        <div>
+            <img class="foto-carro-especifico" src="https://cdn.motor1.com/images/mgl/W89bRq/s1/hennessey-venom-1200-mustang-gt500.jpg">
+            <div class="nome">
+                <h1 id="nome-carro-especifico-mustang" class="nome-carro-especifico">Ford Mustang Shelby GT500</h1>
+                <h2 id="valor-carro-mustang" class="nome-carro-especifico">Avaliado a partir de $79.550 Dolares</h2>
+            </div>
+        </div>
+        <div class="div-2">
+            <div class="informacoes">
+                <div id="title-informacoes" class="dados-informacoes">Especificação</div>
+                <div class="dados-informacoes">
+                    <ul class="lista-informacoes">
+                        <li>Motor V8 5.2</li>
+                        <li>770 hp</li>
+                        <li>Torque de 117,47 a 4800rpm</li>
+                        <li>Transmissão de 7 marchas</li>
+                        <li>Top speed 321 km/h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foto-carro-informaçoes">
+                <img class="img-foto-carro-informaçoes"
+                    src="https://cdn.motor1.com/images/mgl/BXA1oA/s1/hennessey-venom-1200-mustang-gt500.jpg">
+            </div>
+        </div>
+        <div class="barulho">
+            <img class="foto-escap-carro"
+                src="https://cdn.motor1.com/images/mgl/Oo1ZYe/s1/hennessey-venom-1200-mustang-gt500.jpg">
+            <div class="div-botao">
+                <button id="botaoReproduzir" class="botao">Ligue o Motor
+                </button>
+                <audio class="audio-mustang" id="audioPlayer" src="/mp3/nissan-gtr-800hp-launch-control-acceleration-sound.mp3"></audio>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        var botaoReproduzir = document.getElementById('botaoReproduzir');
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        botaoReproduzir.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                botaoReproduzir.textContent = 'Desligar Motor';
+            } else {
+                audioPlayer.pause();
+                botaoReproduzir.textContent = 'Ligue o Motor';
+            }
+        });
+
+        audioPlayer.addEventListener('ended', function () {
+            botaoReproduzir.textContent = 'Ligue o Motor';
+        });
+    </script>
+</body>
+
+</html>

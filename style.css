@@ -1,0 +1,542 @@
+.body-index {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.designi.com.br/images/preview/10879292.jpg);
+
+    min-height: 80vh;
+
+    font-family: 'Courier New';
+}
+
+.escrita {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin-top: 20vh;
+    margin-bottom: 1vh;
+    font-size: 40px;
+    padding: 5px;
+}
+
+#sub-title {
+    margin-bottom: 15vh;
+    font-size: 16px;
+}
+
+#quadrado {
+    background-size: 1400px 1400px;
+    background-position: center;
+    /*background-image: url(https://www.designi.com.br/images/preview/10879292.jpg);*/
+
+    background-color: rgb(175, 175, 175);
+    opacity: 1;
+    backdrop-filter: blur(5px);
+
+    display: grid;
+    flex-wrap: wrap;
+    padding: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#selecao {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    cursor: pointer;
+}
+
+.imagem {
+    padding: 5%;
+    margin: 0;
+}
+
+.legenda {
+    color: white;
+    display: inline-flex;
+}
+
+.cabecario-cronograma {
+    background-color: black;
+    height: 220px;
+}
+
+#cabecario-carro {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-cronograma {
+    color: white;
+    font-size: 20px;
+    height: 60px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.item-cronograma {
+    padding: 35px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.title-cronograma {
+    color: white;
+    font-size: 50px;
+    padding: 50px;
+    margin-left: 60px;
+    font-family: 'Anton', sans-serif;
+}
+
+#margem {
+    height: 20px;
+    background-color: black;
+}
+
+#logo-carro {
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#main {
+    background-color: rgb(216, 215, 215);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mes {
+    font-size: 40px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.dias {
+
+    list-style: none;
+    background-color: white;
+    padding: 21px;
+
+    /*
+    box-shadow: 0px 10px 3px rgba(0, 0, 0, 0.05);
+    width: 70%;   
+    display:inline-block;
+    */
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Anton', sans-serif;
+
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.div-programacao {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1vh;
+}
+
+.programacao {
+    display: flex;
+    padding-left: 50px;
+    font-size: 25px;
+}
+
+#div-dias {
+    display: flex;
+    flex-direction: column;
+}
+
+.inscricao-encerrada {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 95px;
+    margin-top: 25px;
+}
+
+.encerrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-encerrado {
+    height: 450px;
+}
+
+.inscricao-encerrada2 {
+    font-size: 25px;
+    margin-left: 130px;
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+}
+
+.explicacao-inscricao {
+    margin-left: 135px;
+    font-size: 20px;
+}
+
+.aqui-cronograma {
+    color: blue;
+    text-decoration: underline dotted;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 45px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.div-carro {
+    padding: 30px;
+}
+
+.div-carro:hover {
+    transform: scale(1.08);
+}
+
+.foto-carro {
+    max-width: 100%;
+    width: 350px;
+    cursor: pointer;
+}
+
+.legenda-carro {
+    color: 0;
+    cursor: pointer;
+    color: black;
+}
+
+#carro-teste {
+    position: absolute;
+}
+
+.foto-carro-especifico,
+.nome-carro-especifico {
+    position: relative;
+    font-size: 60px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.foto-carro-especifico {
+    width: 100%;
+}
+
+.nome-carro-especifico {
+    position: absolute;
+    color: white;
+    margin-top: -645px;
+    margin-left: 190px;
+}
+
+
+#valor-carro {
+    font-size: 15px;
+    margin-top: -585px;
+    margin-left: 315px;
+}
+
+.div-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 80px;
+}
+
+.img-foto-carro-informações {
+    height: 600px;
+    width: 1000px;
+}
+
+.informacoes {
+    display: flexbox;
+    flex-wrap: wrap;
+    width: 960px;
+    padding-left: 200px;
+}
+
+#title-informacoes {
+    margin-top: 65px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#dia {
+    font-size: 35px;
+}
+
+#sigla-mes {
+    margin-left: 49px;
+    font-size: 15px;
+}
+
+.sigla-mes {
+    display: inline;
+    font-size: 15px;
+    margin-right: 33px;
+}
+
+.teste2 {
+    list-style: none;
+    background-color: white;
+    padding: 22px;
+    font-size: 25px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Anton', sans-serif;
+}
+
+.div-programa {
+    display: flex;
+    align-items: center;
+}
+
+#junho {
+    margin-left: 50px;
+}
+
+#civic {
+    height: 215px;
+}
+
+.barulho {
+    margin-top: 50px;
+}
+
+.div-botao {
+    margin-top: -360px;
+    margin-left: 45%;
+}
+
+.botao {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    font-size: 25px;
+    word-break: break-all;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+}
+
+.dados-informacoes {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.lista-informacoes {
+    font-size: 25px;
+    padding: 10px;
+}
+
+li {
+    padding: 20px;
+}
+
+#foto-civic {
+    height: 100%;
+    width: 100%;
+}
+
+#nome-civic {
+    margin-top: 360px;
+    margin-left: -125px;
+}
+
+.div-2-civic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: -250px;
+}
+
+#foto-perfil-gtr {
+    height: 215px;
+}
+
+#nome-carro-especifico-gtr {
+    margin-top: -845px;
+}
+
+#valor-carro-gtr {
+    font-size: 15px;
+    margin-top: -585px;
+    margin-left: 315px;
+    margin-top: -790px;
+}
+
+.titulo-votacao {
+    margin-bottom: 85px;
+    font-family: 'Playfair Display', serif;
+    ;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    display: inline-flex;
+    margin-left: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+.titulo-categoria {
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+}
+
+#botao-votar {
+    margin-left: 47%;
+    margin-top: 25px;
+    font-size: 25px;
+    background: #016ABC;
+    color: #fff;
+    border: 2px solid #eee;
+    border-radius: 20px;
+    text-shadow: none;
+    margin-bottom: 50px;
+}
+
+#botao-votar:hover {
+    background: #9ad2ff;
+    color: #fff;
+    border-radius: 20px;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+#body-geral {
+    background-color: rgb(224, 224, 224);
+}
+
+#body-votacao {
+    background-color: #fff;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: .6rem;
+}
+
+#nome-carro-especifico-911{
+    margin-top: -850px;
+}
+
+#valor-carro-911{
+    font-size: 15px;
+    margin-top: -585px;
+    margin-left: 315px;
+    margin-top: -797px;
+}
+
+#nome-carro-especifico-mustang{
+    margin-top: -955px;
+    margin-left: 180px;
+}
+
+#valor-carro-mustang{
+    font-size: 17px;
+    margin-left: 210px;
+    margin-top: -899px;
+}
+
+.voto-total h3 {
+    margin-top: 20px;
+}
+
+.lista-categoria div {
+    display: flex;
+    align-items: center;
+    margin: 20px 0; 
+}
+
+.lista-categoria div span img {
+    max-width: 100px; /* Largura máxima para as imagens */
+    height: auto; /* Altura automática para as imagens */
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+#body-resultado{
+    background-color: rgb(209, 209, 209);
+}
+
+.top1, .top2, .top3{
+    background-color: #fff;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+    font-family: 'BioRhyme', serif;
+
+}
+
+.foto-vencedor{
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.posicao{
+    width: 60px;
+}
+
+#voto-total{
+    margin-top: 25px;
+}
+
+#voto-h3-total{
+    padding: 15px;
+    font-family: 'BioRhyme', serif;
+}

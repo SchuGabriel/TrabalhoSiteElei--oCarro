@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Civic 2024</title>
+</head>
+
+<div class="cabecario">
+    <div id="cabecario-carro" class="cabecario-cronograma">
+        <div class="menu-cronograma">
+            <span><img id="logo-carro" src="/img/car.png" alt="logo-car"></span>
+            <a class="link" href="/index.html"><span class="item-cronograma">Início</span></a>
+            <a href="/carros.html"><span class="item-cronograma">Carros</span></a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main id="carro-teste">
+        <div>
+            <img id="foto-civic" class="foto-carro-especifico"
+                src="https://www.honda.com.br/automoveis/sites/hab/files/2023-06/1920x700_desktop.jpg">
+            <div id="nome-civic">
+                <h1 class="nome-carro-especifico">Honda Civic Type R</h1>
+                <h2 id="valor-carro" class="nome-carro-especifico">Avaliado a partir de $72.600 Dolares</h2>
+            </div>
+        </div>
+        <div class="div-2-civic">
+            <div class="informacoes">
+                <div id="title-informacoes" class="dados-informacoes">Especificação</div>
+                <div class="dados-informacoes">
+                    <ul class="lista-informacoes">
+                        <li>Motor à combustão 2.0 DI DOHC VTEC Turbo de 297cv</li>
+                        <li>Transmissão manual de 6 Marchas com tecnologia Rev-Match</li>
+                        <li>Liga leve 19"</li>
+                        <li>Aerofólio com fixação em base de alumínio</li>
+                        <li>Aplicativo Honda LogR</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foto-carro-informaçoes">
+                <img class="img-foto-carro-informaçoes"
+                    src="/img/Civic Type R - Detalhe.jpg">
+            </div>
+        </div>
+        <div class="barulho">
+            <img class="foto-escap-carro"
+                src="/img//civic_type_r.png">
+            <div class="div-botao">
+                <button id="botaoReproduzir" class="botao">Ligue o Motor
+                </button>
+                <audio id="audioPlayer" src="/mp3/honda-fk8-civic-type-r-acceleration-w-valvetronic-catless-fi-exhaust-x-one-belief-automod.mp3"></audio>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var botaoReproduzir = document.getElementById('botaoReproduzir');
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        botaoReproduzir.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                botaoReproduzir.textContent = 'Desligar Motor';
+            } else {
+                audioPlayer.pause();
+                botaoReproduzir.textContent = 'Ligue o Motor';
+            }
+        });
+
+        audioPlayer.addEventListener('ended', function () {
+            botaoReproduzir.textContent = 'Ligue o Motor';
+        });
+    </script>
+</body>
+
+</html>

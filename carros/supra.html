@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Supra</title>
+</head>
+
+<div class="cabecario">
+    <div id="cabecario-carro" class="cabecario-cronograma">
+        <div class="menu-cronograma">
+            <span><img id="logo-carro" src="/img/car.png" alt="logo-car"></span>
+            <a class="link" href="/index.html"><span class="item-cronograma">Início</span></a>
+            <a href="/carros.html"><span class="item-cronograma">Carros</span></a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main id="carro-teste">
+        <div>
+            <img class="foto-carro-especifico" src="/img/supra1.jpg">
+            <div>
+                <h1 class="nome-carro-especifico">Toyota GR Supra</h1>
+                <h2 id="valor-carro" class="nome-carro-especifico">Avaliado a partir de $46.635 Dolares</h2>
+            </div>
+        </div>
+        <div class="div-2">
+            <div class="informacoes">
+                <div id="title-informacoes" class="dados-informacoes">Especificação</div>
+                <div class="dados-informacoes">
+                    <ul class="lista-informacoes">
+                        <li>Motor à combustão 3.0l com 382cv</li>
+                        <li>Transmissão manual de 6 marchas</li>
+                        <li>Liga leve 19"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foto-carro-informaçoes">
+                <img class="img-foto-carro-informaçoes"
+                    src="https://s1.cdn.autoevolution.com/images/news/gallery/driven-2024-toyota-gr-supra-tire-shredder_62.jpg"
+                    alt="">
+            </div>
+        </div>
+        <div class="barulho">
+            <img class="foto-escap-carro"
+                src="https://hips.hearstapps.com/hmg-prod/images/xmod-lp-quote-image-desktop-1570784531.jpg?crop=0.795xw:1.00xh;0.112xw,0&resize=2048:*">
+            <div class="div-botao">
+                <button id="botaoReproduzir" class="botao">Ligue o Motor
+                </button>
+                <audio id="audioPlayer" src="/mp3/StututuSupra fans.mp3"></audio>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var botaoReproduzir = document.getElementById('botaoReproduzir');
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        botaoReproduzir.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                botaoReproduzir.textContent = 'Desligar Motor';
+            } else {
+                audioPlayer.pause();
+                botaoReproduzir.textContent = 'Ligue o Motor';
+            }
+        });
+
+        audioPlayer.addEventListener('ended', function () {
+            botaoReproduzir.textContent = 'Ligue o Motor';
+        });
+    </script>
+</body>
+
+</html>

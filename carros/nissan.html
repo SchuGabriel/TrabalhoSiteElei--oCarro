@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>GT-R</title>
+</head>
+
+<div class="cabecario">
+    <div id="cabecario-carro" class="cabecario-cronograma">
+        <div class="menu-cronograma">
+            <span><img id="logo-carro" src="/img/car.png" alt="logo-car"></span>
+            <a class="link" href="/index.html"><span class="item-cronograma">Início</span></a>
+            <a href="/carros.html"><span class="item-cronograma">Carros</span></a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main id="carro-teste">
+        <div>
+            <img id="foto-capa-gtr" class="foto-carro-especifico" 
+            src="/img/gtr.png">
+            <div class="nome">
+                <h1 id="nome-carro-especifico-gtr" class="nome-carro-especifico">Nissan GT-R 2024</h1>
+                <h2 id="valor-carro-gtr" class="nome-carro-especifico">Avaliado a partir de $120.990 Dolares</h2>
+            </div>
+        </div>
+        <div class="div-2">
+            <div class="informacoes">
+                <div id="title-informacoes" class="dados-informacoes">Especificação</div>
+                <div class="dados-informacoes">
+                    <ul class="lista-informacoes">
+                        <li>Motor 3.8 liter twin-turbo</li>
+                        <li>565hp e 6.800 rpm</li>
+                        <li>Torque de 467 lb-ft</li>
+                        <li>Transmissão de 6 marchas</li>
+                        <li>Roda 20"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foto-carro-informaçoes">
+                <img class="img-foto-carro-informaçoes"
+                    src="https://directimports.com.br/wp-content/uploads/2023/05/nissan-gt-r-nismo-2024-8.webp">
+            </div>
+        </div>
+        <div class="barulho">
+            <img class="foto-escap-carro"
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPZsztykZu8ikjC106_yeLMmv1yDHl2loKNnlL0JzIH-3zxOoucW-U6ise1aVFQ-ADg6O8UZRMKua-cUFxx6GqP4o9YR6DT06064KeFzyOtYeF2HX88VIMrfzvx0lqSf7PNaFIZXp4R0E2-UFOkRRrN0Y5Ocvqj3TQqGoz5tbc77dckLZrtZxTgIma/s3840/MY24%20Nissan%20GT-R-1.jpg">
+            <div class="div-botao">
+                <button id="botaoReproduzir" class="botao">Ligue o Motor
+                </button>
+                <audio id="audioPlayer" src="/mp3/nissan-gtr-800hp-launch-control-acceleration-sound.mp3"></audio>
+            </div>
+        </div>
+    </main>
+    
+
+    <script>
+        var botaoReproduzir = document.getElementById('botaoReproduzir');
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        botaoReproduzir.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                botaoReproduzir.textContent = 'Desligar Motor';
+            } else {
+                audioPlayer.pause();
+                botaoReproduzir.textContent = 'Ligue o Motor';
+            }
+        });
+
+        audioPlayer.addEventListener('ended', function () {
+            botaoReproduzir.textContent = 'Ligue o Motor';
+        });
+    </script>
+</body>
+
+</html>

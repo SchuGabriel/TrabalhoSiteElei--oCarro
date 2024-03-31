@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>911 GT3 RS</title>
+</head>
+
+<div class="cabecario">
+    <div id="cabecario-carro" class="cabecario-cronograma">
+        <div class="menu-cronograma">
+            <span><img id="logo-carro" src="/img/car.png" alt="logo-car"></span>
+            <a class="link" href="/index.html"><span class="item-cronograma">Início</span></a>
+            <a href="/carros.html"><span class="item-cronograma">Carros</span></a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main id="carro-teste">
+        <div>
+            <img class="foto-carro-especifico" src="/img//911.png">
+            <div class="nome">
+                <h1 id="nome-carro-especifico-911" class="nome-carro-especifico">Porsche 911 GT3 RS</h1>
+                <h2 id="valor-carro-911" class="nome-carro-especifico">Avaliado a partir de $225.250 Dolares</h2>
+            </div>
+        </div>
+        <div class="div-2">
+            <div class="informacoes">
+                <div id="title-informacoes" class="dados-informacoes">Especificação</div>
+                <div class="dados-informacoes">
+                    <ul class="lista-informacoes">
+                        <li>Motor aspirado 4.0 e 386 kW</li>
+                        <li>525hp</li>
+                        <li>Torque de 11,9 kgfm/l</li>
+                        <li>Transmissão de 7 marchas</li>
+                        <li>Roda 20" e 21"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="foto-carro-informaçoes">
+                <img class="img-foto-carro-informaçoes"
+                    src="https://images.squarespace-cdn.com/content/v1/5e7918a4b1051f6e49dcfdb1/1586046020842-ZZJ91DJ7LSJ1ZWQAAO96/151_e_engine-compartment-from-passenger-side.jpg">
+            </div>
+        </div>
+        <div class="barulho">
+            <img class="foto-escap-carro"
+                src="/img//911-escap.png">
+            <div class="div-botao">
+                <button id="botaoReproduzir" class="botao">Ligue o Motor
+                </button>
+                <audio id="audioPlayer" src="/mp3/nissan-gtr-800hp-launch-control-acceleration-sound.mp3"></audio>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        var botaoReproduzir = document.getElementById('botaoReproduzir');
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        botaoReproduzir.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                botaoReproduzir.textContent = 'Desligar Motor';
+            } else {
+                audioPlayer.pause();
+                botaoReproduzir.textContent = 'Ligue o Motor';
+            }
+        });
+
+        audioPlayer.addEventListener('ended', function () {
+            botaoReproduzir.textContent = 'Ligue o Motor';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:wght@500&family=Teko:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Playfair+Display:wght@500&family=Teko:wght@500&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Votação</title>
+</head>
+
+<body id="body-geral"> 
+    <div class="cabecario">
+        <div id="margem"></div>
+        <div class="cabecario-cronograma">
+            <div class="menu-cronograma">
+                <span><img id="logo-carro" src="/img/car.png" alt="logo-car"></span>
+                <a class="link" href="/index.html"><span class="item-cronograma">Início</span></a>
+                <a class="link" href="/cronograma.html"><span class="item-cronograma">Cronograma</span></a>
+                <a href="/inscricao.html"><span class="item-cronograma">Inscrição</span></a>
+                <a href="/carros.html"><span class="item-cronograma">Carros</span></a>
+                <a href="/resultado.html"><span class="item-cronograma">Resultados</span></a>
+            </div>
+            <div class="title-cronograma">Votação </div>
+        </div>
+    </div>
+    <main id="body-votacao">
+        <h1 class="titulo-votacao">Qual carro você gostou mais em:</h1>
+        <div class="container">
+            <form class="votacao" id="votacao" action="#">
+                <h2 class="titulo-categoria">Designer Geral: </h2>
+                <label>
+                    <input type="radio" name="designer" value="supra">
+                    Toyota Supra
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="civic">
+                    Honda Civic Type R
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="gtr">
+                    Nissan GT-R
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="911">
+                    Porsche 911 GT3 RS
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="911">
+                    Ford Mustang Shelby GT500
+                </label>
+
+                <br><br><br>
+
+                <h2 class="titulo-categoria">Designer Aerodinâmico: </h2>
+                <label>
+                    <input type="radio" name="aerodinamico" value="supra">
+                    Toyota Supra
+                </label>
+                <label>
+                    <input type="radio" name="aerodinamico" value="civic">
+                    Honda Civic Type R
+                </label>
+                <label>
+                    <input type="radio" name="aerodinamico" value="gtr">
+                    Nissan GT-R
+                </label>
+                <label>
+                    <input type="radio" name="aerodinamico" value="911">
+                    Porsche 911 GT3 RS
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="911">
+                    Ford Mustang Shelby GT500
+                </label>
+
+                <br><br><br>
+
+                <h2 class="titulo-categoria">Performance: </h2>
+                <label>
+                    <input type="radio" name="performance" value="supra">
+                    Toyota Supra
+                </label>
+                <label>
+                    <input type="radio" name="performance" value="civic">
+                    Honda Civic Type R
+                </label>
+                <label>
+                    <input type="radio" name="performance" value="gtr">
+                    Nissan GT-R
+                </label>
+                <label>
+                    <input type="radio" name="performance" value="911">
+                    Porsche 911 GT3 RS
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="911">
+                    Ford Mustang Shelby GT500
+                </label>
+
+                <br><br><br>
+
+                <h2 class="titulo-categoria">Som: </h2>
+                <label>
+                    <input type="radio" name="som" value="supra">
+                    Toyota Supra
+                </label>
+                <label>
+                    <input type="radio" name="som" value="civic">
+                    Honda Civic Type R
+                </label>
+                <label>
+                    <input type="radio" name="som" value="gtr">
+                    Nissan GT-R
+                </label>
+                <label>
+                    <input type="radio" name="som" value="911">
+                    Porsche 911 GT3 RS
+                </label>
+                <label>
+                    <input type="radio" name="designer" value="911">
+                    Ford Mustang Shelby GT500
+                </label>
+
+                <br><br>
+
+                <button id="botao-votar" type="button" onclick="enviarVoto()">Votar</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script>
+
+
+        function enviarVoto() {
+            var votos = 0;
+            var opcaoSelecionadaDesignerGeral = document.querySelector('input[name="designer"]:checked');
+            var opcaoSelecionadaDesignerAero = document.querySelector('input[name="aerodinamico"]');
+            var opcaoSelecionadaPerformance = document.querySelector('input[name="performance"]');
+            var opcaoSelecionadaSom = document.querySelector('input[name="som"]');
+
+
+            if (votos === 0) {
+                votos = 1;
+                if (opcaoSelecionadaDesignerGeral && opcaoSelecionadaDesignerAero && opcaoSelecionadaPerformance && opcaoSelecionadaSom) {
+                    alert("Voto realizado com sucesso");
+                } else {
+                    alert("Por favor, selecione uma opção por categoria antes de votar.");
+                }
+            } else {
+                alert("Você já votou");
+            }
+        }
+    </script>
+</body>
+
+</html>
